@@ -13,6 +13,7 @@
 		3AAC122120F769BF0021C3B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AAC122020F769BF0021C3B0 /* Assets.xcassets */; };
 		3AAC122420F769BF0021C3B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AAC122220F769BF0021C3B0 /* LaunchScreen.storyboard */; };
 		3AAC122720F769BF0021C3B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAC122620F769BF0021C3B0 /* main.m */; };
+		5846CFA96CEC48F60F256C0F /* libPods-网易云直播.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F9580CED8D24381E48A02A /* libPods-网易云直播.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		3AAC122320F769BF0021C3B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AAC122520F769BF0021C3B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AAC122620F769BF0021C3B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		87F9580CED8D24381E48A02A /* libPods-网易云直播.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-网易云直播.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC9B98A390AA7D008848C4ED /* Pods-网易云直播.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-网易云直播.debug.xcconfig"; path = "Pods/Target Support Files/Pods-网易云直播/Pods-网易云直播.debug.xcconfig"; sourceTree = "<group>"; };
+		F05EE30F6ADD94A371429A12 /* Pods-网易云直播.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-网易云直播.release.xcconfig"; path = "Pods/Target Support Files/Pods-网易云直播/Pods-网易云直播.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5846CFA96CEC48F60F256C0F /* libPods-网易云直播.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				3AAC121620F769BA0021C3B0 /* 网易云直播 */,
 				3AAC121520F769BA0021C3B0 /* Products */,
+				732AFE3A3A14B6DAA095A00E /* Pods */,
+				B904FBF414FD66AF727F917F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +78,23 @@
 			path = "网易云直播";
 			sourceTree = "<group>";
 		};
+		732AFE3A3A14B6DAA095A00E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC9B98A390AA7D008848C4ED /* Pods-网易云直播.debug.xcconfig */,
+				F05EE30F6ADD94A371429A12 /* Pods-网易云直播.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B904FBF414FD66AF727F917F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87F9580CED8D24381E48A02A /* libPods-网易云直播.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,6 +102,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3AAC122A20F769BF0021C3B0 /* Build configuration list for PBXNativeTarget "网易云直播" */;
 			buildPhases = (
+				0E50DEDC4DD100FDCF2C7541 /* [CP] Check Pods Manifest.lock */,
 				3AAC121020F769BA0021C3B0 /* Sources */,
 				3AAC121120F769BA0021C3B0 /* Frameworks */,
 				3AAC121220F769BA0021C3B0 /* Resources */,
@@ -135,6 +160,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E50DEDC4DD100FDCF2C7541 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-网易云直播-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3AAC121020F769BA0021C3B0 /* Sources */ = {
@@ -281,16 +327,14 @@
 		};
 		3AAC122B20F769BF0021C3B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC9B98A390AA7D008848C4ED /* Pods-网易云直播.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39GTQL45GN;
 				INFOPLIST_FILE = "网易云直播/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ma.-----";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ma.Live;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -298,16 +342,14 @@
 		};
 		3AAC122C20F769BF0021C3B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F05EE30F6ADD94A371429A12 /* Pods-网易云直播.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39GTQL45GN;
 				INFOPLIST_FILE = "网易云直播/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ma.-----";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ma.Live;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
